@@ -1,47 +1,66 @@
 <div class="container-2">
     <div class="sindan-container">
-        <% question = @topic2.question %>
-
-        <div class="col-12">
-        <% if question == 3 %>
-            <p>Q3.ハンターたる者、時に嘘もつかなくてはいけません。あなたはどう行動しますか？</p>
-        <% elsif question == 4 %>
-            <p>Q3.自分が悩みを抱えてしまったら、どうやって解決しますか？</p>
-        <% elsif question == 5 %>
-            <p>Q3.仲間のハンターが悩みを抱えているようだ。あなたはどう行動しますか？</p>
+        <% if @topic2.question == 3  %>
+            <div class="col-12">
+                <p>Q3.ハンターたる者、時に嘘もつかなくてはいけません。あなたはどう行動しますか？</p>
+            </div>
+            <%= form_for(@topic5) do |f| %>
+                <div class="col-6">
+                    <div class="col-7">
+                        <%= f.radio_button :question, "6", id: "question_6" %>
+                        <label for="question_6">バレなければ嘘は使う</label>
+                    </div>
+                    <div class="col-7">
+                        <%= f.radio_button :question, "7", id: "question_7" %>
+                        <label for="question_7">極力嘘はつきたくない</label>
+                    </div>
+                </div>
+                <div class="sindanbotan">
+                    <%= f.submit "次へ" %>
+                </div>
+            <% end %>
         <% end %>
-        </div>
 
-        <%= form_for(@topic3) do |f| %>
-        <div class="col-6">
-            <div class="col-7">
-            <% if question == 3 %>
-                <%= f.radio_button :question, "6", id: "question_6" %>
-                <label for="question_6">バレなければ嘘は使う</label>
-            <% elsif question == 4 %>
-                <%= f.radio_button :question, "7", id: "question_7" %>
-                <label for="question_7">即行動に移す</label>
-            <% elsif question == 5 %>
-                <%= f.radio_button :question, "8", id: "question_8" %>
-                <label for="question_8">相談に乗る</label>
-            <% end %>    
+        <% if @topic2.question == 4  %>
+            <div class="col-12">
+                <p>Q3.自分が悩みを抱えてしまったら、どうやって解決しますか？</p>
             </div>
-            <div class="col-7">
-            <% if question == 3 %>
-                <%= f.radio_button :question, "7", id: "question_7" %>
-                <label for="question_7">極力嘘はつきたくない</label>
-            <% elsif question == 4 %>
-                <%= f.radio_button :question, "8", id: "question_8" %>
-                <label for "question_8">結論が出るまで考え抜く</label>
-            <% elsif question == 5 %>
-                <%= f.radio_button :question, "9", id: "question_9" %>
-                <label for="question_9">そっとしておく</label>
-            <% end %>    
+            <%= form_for(@topic5) do |f| %>
+                <div class="col-6">
+                    <div class="col-7">
+                        <%= f.radio_button :question, "7", id: "question_7" %>
+                        <label for="question_7">即行動に移す</label>
+                    </div>
+                    <div class="col-7">
+                        <%= f.radio_button :question, "8", id: "question_8" %>
+                        <label for "question_8">結論が出るまで考え抜く</label>
+                    </div>
+                </div>
+                <div class="sindanbotan">
+                    <%= f.submit "次へ" %>
+                </div>
+            <% end %>
+        <% end %>
+
+        <% if @topic2.question == 5  %>
+            <div class="col-12">
+                <p>Q3.仲間のハンターが悩みを抱えているようだ。あなたはどう行動しますか？</p>
             </div>
-        </div>
-        <div class="sindanbotan">
-            <%= f.submit "次へ" %>
-        </div>
+            <%= form_for(@topic5) do |f| %>
+                <div class="col-6">
+                    <div class="col-7">
+                        <%= f.radio_button :question, "8", id: "question_8" %>
+                        <label for="question_8">相談に乗る</label>
+                    </div>
+                    <div class="col-7">
+                        <%= f.radio_button :question, "9", id: "question_9" %>
+                        <label for="question_9">そっとしておく</label>
+                    </div>
+                </div>
+                <div class="sindanbotan">
+                    <%= f.submit "次へ" %>
+                </div>
+            <% end %>
         <% end %>
     </div>
 </div>
