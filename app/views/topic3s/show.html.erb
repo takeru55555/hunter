@@ -1,0 +1,87 @@
+<div class="container-2">
+    <div class="sindan-container">
+        <% if @topic3.question == 6  %>
+        <div class="col-12">
+            <p>Q4.あなたが興味をもった対象はずっと同じですか？それとも次々に変わっていきますか？</p>
+        </div>
+        <%= form_for(@topic4) do |f| %>
+            <div class="col-6">
+            <div class="col-7">
+                <%= f.radio_button :question, "12", id: "question_12" %>
+                <label for="question_12">ずっと同じだ</label>
+            </div>
+            <div class="col-7">
+                <%= f.radio_button :question, "10", id: "question_10" %>
+                <label for="question_10">次々変わる</label>
+            </div>
+            </div>
+            <div class="sindanbotan">
+            <%= f.submit "次へ" %>
+            </div>
+        <% end %>
+        <% end %>
+
+        <% if @topic3.question == 7  %>
+        <div class="col-12">
+            <p>Q4.あなたが感極まった時、あるいは悔しさが溢れてしまった時、人前でも涙を見せますか？</p>
+        </div>
+        <%= form_for(@topic4) do |f| %>
+            <div class="col-6">
+            <div class="col-7">
+                <%= f.radio_button :question, "13", id: "question_13" %>
+                <label for="question_13">涙を見せることもある</label>
+            </div>
+            <div class="col-7">
+                <%= f.radio_button :question, "12", id: "question_12" %>
+                <label for="question_12">人前で涙は見せない</label>
+            </div>
+            </div>
+            <div class="sindanbotan">
+            <%= f.submit "次へ" %>
+            </div>
+        <% end %>
+        <% end %>
+
+        <% if @topic3.question == 8  %>
+        <div class="col-12">
+            <p>Q4.戦うために武器は必要だと思いますか？</p>
+        </div>
+        <%= form_for(@topic4) do |f| %>
+            <div class="col-6">
+            <div class="col-7">
+                <%= f.radio_button :question, "12", id: "question_12" %>
+                <label for="question_12">絶対に必要だ</label>
+            </div>
+            <div class="col-7">
+                <%= f.radio_button :question, "13", id: "question_13" %>
+                <label for="question_13">必ずしも必要ではない</label>
+            </div>
+            </div>
+            <div class="sindanbotan">
+            <%= f.submit "次へ" %>
+            </div>
+        <% end %>
+        <% end %>
+
+        <% if @topic3.question == 9  %>
+        <div class="col-12">
+            <p>Q4.自分のペースと周囲のペース。あなたはどちらを重要視しますか？</p>
+        </div>
+        <%= form_for(@topic4) do |f| %>
+            <div class="col-6">
+            <div class="col-7">
+                <%= f.radio_button :question, "11", id: "question_11" %>
+                <label for="question_11">自分</label>
+            </div>
+            <div class="col-7">
+                <%= f.radio_button :question, "10", id: "question_10" %>
+                <label for="question_10">周囲</label>
+            </div>
+            </div>
+            <div class="sindanbotan">
+            <%= f.submit "次へ" %>
+            </div>
+        <% end %>
+        <% end %>
+    </div>
+</div>

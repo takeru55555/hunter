@@ -1,0 +1,22 @@
+<div class="container-2">
+    <div class="sindan-container">
+        <div class="col-12">
+            <p>Q1. ハンターたる者、争いは避けて通れません。あなたはどう行動しますか？</p>
+        </div>
+        <%= form_for(@topic, class: 'form-horizontal', role: 'form') do |f| %>
+            <div class="col-6">
+                <div class="col-7">
+                    <%= f.radio_button :question, "1", id: "question_1" %>
+                    <label for="question_1">全て争いで解決していく</label>
+                </div>
+                <div class="col-7">
+                    <%= f.radio_button :question, "2", id: "question_2" %>
+                    <label for="question_2">しなくても良い争いは避けて進む</label>
+                </div>
+            </div>
+            <div class="sindanbotan">
+                <%= f.submit "次へ" %>
+            </div>
+        <% end %>
+    </div>
+</div>

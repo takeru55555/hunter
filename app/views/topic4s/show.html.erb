@@ -1,0 +1,87 @@
+<div class="container-2">
+    <div class="sindan-container">
+        <% if @topic4.question == 10  %>
+            <div class="col-12">
+                <p>Q5.あなたは、一人で静かに盛り上がるのと、大勢でにぎやかに盛り上がるのと、どちらを好みますか？</p>
+            </div>
+            <%= form_for(@topic5) do |f| %>
+                <div class="col-6">
+                    <div class="col-7">
+                        <%= f.radio_button :question, "15", id: "question_15" %>
+                        <label for="question_15">一人で静かに</label>
+                    </div>
+                    <div class="col-7">
+                        <%= f.radio_button :question, "18", id: "question_18" %>
+                        <label for="question_18">大勢でにぎやかに</label>
+                    </div>
+                </div>
+                <div class="sindanbotan">
+                    <%= f.submit "次へ" %>
+                </div>
+            <% end %>
+        <% end %>
+
+        <% if @topic4.question == 11  %>
+            <div class="col-12">
+                <p>Q5.ハンターの世界でもファッションセンスは大事です。あなたはどういう服装を選びますか？</p>
+            </div>
+            <%= form_for(@topic5) do |f| %>
+                <div class="col-6">
+                    <div class="col-7">
+                        <%= f.radio_button :question, "20", id: "question_20" %>
+                        <label for="question_20">売れ筋の服を好む</label>
+                    </div>
+                    <div class="col-7">
+                        <%= f.radio_button :question, "19", id: "question_19" %>
+                        <label for="question_19">誰も着ないような服を選ぶ</label>
+                    </div>
+                </div>
+                <div class="sindanbotan">
+                    <%= f.submit "次へ" %>
+                </div>
+            <% end %>
+        <% end %>
+
+        <% if @topic4.question == 12  %>
+            <div class="col-12">
+                <p>Q5.あらゆる状況を考えておかなければならないハンター。あなたの理想像はどのぐらいですか？</p>
+            </div>
+            <%= form_for(@topic5) do |f| %>
+                <div class="col-6">
+                    <div class="col-7">
+                        <%= f.radio_button :question, "20", id: "question_20" %>
+                        <label for="question_20">一般的な想像力だ</label>
+                    </div>
+                    <div class="col-7">
+                        <%= f.radio_button :question, "16", id: "question_16" %>
+                        <label for="question_16">理想像が豊かすぎて、考えすぎな面もある</label>
+                    </div>
+                </div>
+                <div class="sindanbotan">
+                    <%= f.submit "次へ" %>
+                </div>
+            <% end %>
+        <% end %>
+
+        <% if @topic4.question == 13  %>
+            <div class="col-12">
+                <p>Q5.ところで、昨日食べた物のことを覚えていますか？</p>
+            </div>
+            <%= form_for(@topic5) do |f| %>
+                <div class="col-6">
+                    <div class="col-7">
+                        <%= f.radio_button :question, "14", id: "question_14" %>
+                        <label for="question_14">しっかりすべて覚えている</label>
+                    </div>
+                    <div class="col-7">
+                        <%= f.radio_button :question, "17", id: "question_17" %>
+                        <label for="question_17">あまり覚えていない</label>
+                    </div>
+                </div>
+                <div class="sindanbotan">
+                    <%= f.submit "次へ" %>
+                </div>
+            <% end %>
+        <% end %>
+    </div>
+</div>

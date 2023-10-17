@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Merienda');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@600&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+  }
+  
+.background {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+/* Default Styling */
+body {
+  font-family: 'Merienda', cursive;
+}
+.container {
+    height: 100vh;
+    display: flex;
+    background: #1f1f1f;
+    color: #1f1f1fdd;
+    justify-content: center;
+    align-items: center;
+  }
+
+.box {
+  background: #E5E5E5;
+  border-radius: 5px;
+  padding: 5%;
+  display: inline-block; 
+  width: 200px;
+  text-align: center;
+  z-index: 1;
+}
+a {
+  color: #0bd;
+}

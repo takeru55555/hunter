@@ -1,0 +1,40 @@
+.container-2 {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    color: #1f1f1fdd;
+    justify-content: center;
+  }
+.col-12 p{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 900;
+}
+.sindanbotan{
+    text-align: center;
+}
+.col-6{
+    justify-content: center;
+}
+.col-6 input{
+    display: none;
+}
+.col-6 label{
+    display: block;
+    cursor: pointer;
+    border-right: 1px solid #D7D7D7;
+    background: #E5E5E5;
+    color: #555E64;
+    font-size: 20px;
+    text-align: center;
+    transition: .2s;
+    border-radius: 25px;
+    padding: 5%;
+}
+.col-6 input[type="radio"]:checked + label {
+    background-color: #0bd;
+    color: #fff;
+}
+.col-7{
+    margin: 5%;
+}
