@@ -1,5 +1,5 @@
 .col-8{
-    height: 50vh;
+    height: 30vh;
     display: flex;
     align-items: center;
     color: #1f1f1fdd;
@@ -17,7 +17,14 @@
     justify-content: center;
 }
 .col-9{
-    height: 30vh;
+    display: flex;
+    align-items: center;
+    color: #1f1f1fdd;
+    justify-content: center;
+    text-align: center;
+}
+.col-10{
+    height: 250px;
     display: flex;
     align-items: center;
     color: #1f1f1fdd;
