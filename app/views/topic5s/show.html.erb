@@ -38,18 +38,20 @@
         </div>
     <% end %>
 
-    <% if @topic5.question == 17  %>
-        <div class="col-13">
-            <p>放出系</p>
-        </div>
-        <div class="col-10">
-            <%= image_tag '/assets/reorio.jpg', size: "250x250", class: 'hoge' %>
-        </div>
-        <div class="col-8">
-            <p>上に厚いアナタは放出系にピッタリ！<br>
-            面倒見がよいため仲間や後輩から慕われやすく、客商売に向いたハンターかもしれません。</p>
-        </div>
-    <% end %>
+    <div class="col-15">
+        <% if @topic5.question == 17  %>
+            <div class="col-13">
+                <p>放出系</p>
+            </div>
+            <div class="col-10">
+                <%= image_tag '/assets/reorio.jpg', size: "250x250", class: 'hoge' %>
+            </div>
+            <div class="col-8">
+                <p>上に厚いアナタは放出系にピッタリ！<br>
+                面倒見がよいため仲間や後輩から慕われやすく、客商売に向いたハンターかもしれません。</p>
+            </div>
+        <% end %>
+    </div>
 
     <% if @topic5.question == 18  %>
         <div class="col-13">
@@ -89,7 +91,7 @@
             まずは四大行を行った方がいいですよ！</p>
         </div>
     <% end %>
-
+   
     <div class="col-9">
         <%= link_to"トップページに戻る",topics_top_path %>
     </div>
