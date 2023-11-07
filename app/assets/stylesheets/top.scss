@@ -60,7 +60,7 @@ a {
   display: inline-block;
   font-weight: bold;
   text-decoration: none;
-  color: #E5E5E5;
+  color: white;
   padding: 0.3em 0.5em;
   background: #0bd;
   border-radius: 5px;
@@ -68,6 +68,7 @@ a {
 }
 
 .btn-sf-like:hover {
-  text-shadow: -6px 0px 15px rgba(255, 255, 240, 0.83),
-               6px 0px 15px rgba(255, 255, 240, 0.83);
+  text-shadow: -6px 0px 15px #E5E5E5,
+               6px 0px 15px #E5E5E5;
 }
+

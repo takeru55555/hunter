@@ -8,5 +8,3 @@ var particles = Particles.init({
     connectParticles: true
   });
 
-
-  
