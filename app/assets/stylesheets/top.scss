@@ -4,6 +4,12 @@
     padding: 0;
     margin: 0;
   }
+  /* Loading アイコンの大きさ設定　*/
+#splash_logo img {
+  background-size: cover;
+  width: 150px;
+}
+
   
 .background {
   position: absolute;
@@ -31,7 +37,6 @@ body {
   border-radius: 5px;
   padding: 5%;
   display: inline-block; 
-  width: 200px;
   text-align: center;
   z-index: 1;
 }
@@ -70,5 +75,50 @@ a {
 .btn-sf-like:hover {
   text-shadow: -6px 0px 15px #E5E5E5,
                6px 0px 15px #E5E5E5;
+}
+
+
+/*========= LoadingのためのCSS ===============*/
+
+/* Loading背景画面設定　*/
+#splash {
+    /*fixedで全面に固定*/
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background:#1C2120;
+  text-align:center;
+  color:#fff;
+}
+
+/* Loading画像中央配置　*/
+#splash_logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+/* fadeUpをするアイコンの動き */
+
+.fadeUp{
+animation-name: fadeUpAnime;
+animation-duration:0.5s;
+animation-fill-mode:forwards;
+opacity: 0;
+}
+
+@keyframes fadeUpAnime{
+  from {
+    opacity: 0;
+  transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+  transform: translateY(0);
+  }
 }
 
